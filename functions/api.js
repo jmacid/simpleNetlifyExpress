@@ -8,6 +8,7 @@ const router = express.Router()
 app.use(cors())
 
 router.get('/', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
   res.json({
     "path": "Home",
     "message": "You are at home"
@@ -15,6 +16,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
   res.json({
     "path": "json",
     "message": "You are at json"
