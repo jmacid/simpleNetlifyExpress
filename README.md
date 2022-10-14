@@ -6,8 +6,18 @@ First run `npx netlify-cli dev`, and then open `dist/index.html` and see the con
 ## Deploy
 Drag and drop the content of the folder in netlify.
 
+
+
+## Functions
+`npm install netlify-cli -g`
+`netlify functions:create`
+
+Deploy using `netlify deploy --prod`
+
 ## References
 [Netlify](https://docs.netlify.com/)
 [Repo](https://github.com/jmacid/simpleNetlifyExpress)
 [Video](https://www.youtube.com/watch?v=q1TrsvKdpcU)
 [netlify-dev](https://cli.netlify.com/netlify-dev/)
+https://www.youtube.com/watch?v=vEFJZ9rSSNM
+https://www.youtube.com/watch?v=9iZCLODSq6k 

@@ -1,11 +1,20 @@
 async function start() {
-  const response = await fetch('http://localhost:8885/.netlify/functions/api/json')
-  const jsonRes = await response.json()
+  
+  try {
+    const response = await fetch('https://celebrated-peony-ac4e26.netlify.app/.netlify/functions/api/json')
 
-  const p = document.getElementById("responseP")
-  p.textContent = jsonRes.message
+    if(response === null)
+      throw new Error("Backend unreachable")
 
-  console.log(jsonRes.message);
+    const jsonRes = await response.json()
+  
+    const p = document.getElementById("responseP")
+    p.textContent = jsonRes.message
+  
+    console.log(jsonRes.message);
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 start()
